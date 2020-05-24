@@ -68,3 +68,8 @@ RUN a2enmod rewrite headers
 
 # Cleanup
 RUN rm -rf /usr/src/*
+
+# # Add note repo
+RUN mkdir -p /var/www/html && \
+    cd /var/www/html && \
+    git clone https://github.com/counterall/cknote.git
